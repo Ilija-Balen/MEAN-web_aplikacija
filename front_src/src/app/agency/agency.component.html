@@ -1,0 +1,71 @@
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29" (click)="show_profil()">Profil</button>
+    <button class="button-29" (click)="show_treca()">Poslovi</button>
+</div>
+
+<br/>
+<br/>
+<div style="text-align: center;">
+    <img [src]="loggeduser.url" width="100" height="100">
+</div>
+<br/>
+<table class="center-table">
+    <tr><td>Naziv: {{loggeduser.agname}}</td></tr>
+    <tr><td>Adresa: {{loggeduser.State}} {{loggeduser.City}} {{loggeduser.Street}} {{loggeduser.snumber}}</td></tr> 
+    <tr><td>Description: {{loggeduser.description}}</td></tr>
+    <tr><td>E-mail: {{loggeduser.email}}</td></tr>
+    <tr><td>Telefon: {{loggeduser.phone}}</td></tr>
+    <tr><td>Username: {{loggeduser.username}}</td></tr>
+    <tr><td>PIB: {{loggeduser.PIB}}</td></tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+    <tr><td></td></tr>
+</table>
+
+<br/>
+<br/>
+<br/>
+<div class="center-div">
+<button (click)="show_agency()" class="center-table" class="button-10">Azuriraj</button>
+</div>
+<table *ngIf="showagency" class="center-table">
+    <tr>
+        <td>Username : </td><td><input type="text" name="username" [(ngModel)]="username"></td>
+    </tr>
+    
+    <tr>
+        <td>Telephone :</td><td><input type="text" name="telephone" [(ngModel)]="telephone"></td>
+    </tr>
+    
+    <tr>
+        <td>E-mail : </td><td><input type="email" name="email" [(ngModel)]="email"></td>
+    </tr>
+
+        
+    
+        <tr>
+            <td>Agency name :</td>
+            <td> <input type="text" name="agname" [(ngModel)]="agname"></td>
+        </tr>
+        <tr > <td>Address(STATE,CITY,STREET) : </td></tr>
+        <tr ><td>STATE : </td><td> <input type="text" name="state" value="state" [(ngModel)]="state"></td></tr>
+        <tr ><td>CITY : </td><td> <input type="text" name="city" value="city" [(ngModel)]="city"></td></tr>
+        <tr ><td>STREET : </td><td> <input type="text" name="street" value="street" [(ngModel)]="street"></td></tr>
+        <tr ><td> Street Number :</td><td><input type="number" name="snumber" [(ngModel)]="snumber"></td></tr>
+        <tr >
+            <td>PIB :</td><td> <input type="text" name="mbroj" [(ngModel)]="PIB"></td>
+        </tr>
+        <tr >
+            <td>Description :</td><td> <input type="text" name="description" [(ngModel)]="desc"></td>
+        </tr>
+</table>
+<div *ngIf="showagency" class="center-div">
+    <button class="button-10" (click)="azurirajAgency()">Izvrsi</button>
+</div> 
+
+
+
+
+<p style="color: red;"> {{msgpass}}</p>

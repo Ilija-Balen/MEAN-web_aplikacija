@@ -1,0 +1,142 @@
+
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29" (click)="show_profil()">Profil</button>
+    <button class="button-29">Poslovi</button>
+</div>
+<br/>
+<br/>
+<div *ngIf="poslovi.length>0">
+<table class="center-table">
+    <tr>
+        <th>Email od potrazioca:</th>
+        <th>Vreme u kom mogu da se odrzavaju radovi</th>
+    </tr>
+
+    <tr *ngFor="let posao of poslovi">
+        <td>{{posao.email}}</td>
+        <td>{{posao.vreme}}</td>
+        <td><button class="button-10" (click)="pregledaj(posao)">Pregledaj</button></td>
+        <td><button class="button-10" (click)="show_prihvati(posao)">Prihvati</button></td>
+        <td><button class="button-10" (click)="odbij(posao)">Odbij</button></td>
+    </tr>
+</table>
+</div>
+<br/>
+<br/>
+<div *ngIf="showprihvati" class="center-div">
+    Unesite kolika je vasa ponuda za selektovani posao:<input type="number" [(ngModel)]="ponuda">
+    <button class="button-10" (click)="prihvati()">Posalji ponudu</button>
+</div>
+<br/>
+<br/>
+<div *ngIf="aktivniposlovi.length>0" class="center-div">
+<br/>
+<table class="center-table">
+    <p style="font-size: 23px;"> Tabela Aktivnih Poslova: </p>
+    <tr>
+        <th>IdO</th>
+        <th>Email potrazioca</th>
+        <th>Vreme odrzavanja radova</th>
+        <th>Novcana nadoknada</th>
+    </tr>
+
+    <tr *ngFor="let posao of aktivniposlovi">
+        <td>{{posao.idO}}</td>
+        <td>{{posao.email}}</td>
+        <td>{{posao.vreme}}</td>
+        <td>{{posao.ponudaAgencije}}</td>
+        <td><button class="button-10" (click)="prikazi(posao)">Pregledaj</button></td>
+        
+    </tr>
+</table>
+</div>
+<br/>
+<br/>
+<div *ngIf="flagpregledaj" class="center-div">
+Ime klijenta: {{korisnik.firstname}} 
+<br/>
+Prezime klijenta: {{korisnik.lastname}} 
+<br/>
+Objekat:<br/> Tip: {{objekat.tip}}
+<br/>
+Adresa: {{objekat.State}} {{objekat.City}} {{objekat.Street}} {{objekat.snumber}}
+<br/>
+Broj soba: {{objekat.roomcnt}}
+<br/>
+Povrsina: {{objekat.surface}}
+<br/>
+Izgled:
+<br/>
+<img [src]="objekat.url" width="150" height="150">
+</div>
+<br/>
+<br/>
+<div *ngIf="radnici.length>0" class="center-div">
+    <table>
+        <th>Slobodni Radnici</th>
+        <tr *ngFor="let radnik of radnici">
+            <td>{{radnik.email}} &nbsp;</td>
+            <td>{{radnik.firstname}} &nbsp;</td>
+            <td>{{radnik.lastname}} &nbsp;</td>
+        </tr>
+    </table>
+</div>
+<br/>
+<br/>
+
+
+<div *ngIf="url" class="center-div">
+    <canvas id="treca-agencija-canvas" width="300" height="300">
+        <img [src]="vrata" id="vrataID">
+    </canvas>
+</div>
+<div *ngIf="url" class="center-div">
+    <div *ngIf="radnici.length>0">
+        Unesite email radnika kog zelite da dodate: &nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="string" [(ngModel)]="emailFF">
+        <br/>
+        Unesite idProstorije u kojoj zelite da vas radnik radi: &nbsp;<input type="number" [(ngModel)]="idPFF">
+        <button class="button-10" (click)="dodaj()">Dodaj</button>
+    </div>
+</div>
+
+
+<table class="center-table" *ngIf="url">
+        <tr><th>Radnici koji rade na selektovanom objektu</th></tr>
+       <tr *ngFor="let prostorija of izabraniObjekat.tacke">
+            
+            <td *ngIf="prostorija.emailR"> 
+                Radnik email: {{prostorija.emailR}} i prostorija u kojoj radi: {{prostorija.idP}}
+            </td>
+        </tr>
+</table>
+
+
+<br/>
+<br/>
+<br/>
+
+<table class="change-status-table">
+    <p style="font-size: 23px;">Promeni status objekta</p>
+    <tr>
+        <td>Unesi idO:</td>
+        <td><input type="number" [(ngModel)]="ps_idO"></td>
+    </tr>
+    <tr>
+        <td>Unesi idP:</td>
+        <td> <input type="number" [(ngModel)]="ps_idP"></td>
+    </tr>
+    <tr>
+        <td>Email objekat poseduje:</td>
+        <td><input type="text" [(ngModel)]="ps_email"></td>
+    </tr>
+    <tr>
+        <td>Novi status:</td>
+        <td> <input type="number" [(ngModel)]="ps_status"></td>
+    </tr>
+    <button class="button-10" (click)="promeni_status()">Promeni status</button> 
+</table>
+
+<p style="color: red;"> {{message}}</p>

@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "648f2f54c741ea753f442538"
+  },
+  "speciality": "tapetar",
+  "phone": "066123456",
+  "email": "zdera@gmail.com",
+  "firstname": "zdera",
+  "lastname": "slika",
+  "radi": 1,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f442539"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "pera@gmail.com",
+  "firstname": "pera",
+  "lastname": "peric",
+  "radi": 1,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253a"
+  },
+  "speciality": "moler",
+  "phone": "066123456",
+  "email": "mika@gmail.com",
+  "firstname": "mika",
+  "lastname": "mikic",
+  "radi": 1,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253b"
+  },
+  "speciality": "tapetar",
+  "phone": "066123456",
+  "email": "fika@gmail.com",
+  "firstname": "fika",
+  "lastname": "fikic",
+  "radi": 1,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253c"
+  },
+  "speciality": "tapetar",
+  "phone": "066123456",
+  "email": "radnik0@gmail.com",
+  "firstname": "radnik0",
+  "lastname": "radnik0",
+  "radi": 0,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253d"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "radnik5@gmail.com",
+  "firstname": "radnik5",
+  "lastname": "radnik5",
+  "radi": 1,
+  "emailAgency": "agencija1@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253e"
+  },
+  "speciality": "moler",
+  "phone": "066123456",
+  "email": "riki@gmail.com",
+  "firstname": "riki",
+  "lastname": "rikic",
+  "radi": 0,
+  "emailAgency": "agencija2@yahoo.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f44253f"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "radnik1@gmail.com",
+  "firstname": "radnik1",
+  "lastname": "radnik1",
+  "radi": 0,
+  "emailAgency": "agencija2@yahoo.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f442540"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "radnik2@gmail.com",
+  "firstname": "radnik2",
+  "lastname": "radnik2",
+  "radi": 0,
+  "emailAgency": "agencija2@yahoo.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f442541"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "radnik3@gmail.com",
+  "firstname": "radnik3",
+  "lastname": "radnik3",
+  "radi": 0,
+  "emailAgency": "agencija2@yahoo.com"
+},
+{
+  "_id": {
+    "$oid": "648f2f54c741ea753f442542"
+  },
+  "speciality": "zidar",
+  "phone": "066123456",
+  "email": "radnik4@gmail.com",
+  "firstname": "radnik4",
+  "lastname": "radnik4",
+  "radi": 0,
+  "emailAgency": "agencija2@yahoo.com"
+}]

@@ -1,0 +1,27 @@
+<br/>
+<br/>
+<br/>
+<div style="text-align: right;">
+    <button (click)="nazad()" class="button-29">Nazad</button>
+</div>
+<table *ngIf="poslovi.length>0">
+    <tr>
+        <th>IdO &nbsp;</th>
+        <th>Email &nbsp;</th>
+        <th>Email Agencije &nbsp;</th>
+        <th>Vreme &nbsp;</th>
+        <th>Status &nbsp;</th>
+        <th>Ponuda Agencije &nbsp;</th>
+        <th>Prihvacen</th>
+    </tr>
+
+    <tr *ngFor="let p of poslovi">
+        <td>{{p.idO}} &nbsp;</td>
+        <td>{{p.email}} &nbsp;</td>
+        <td>{{p.emailAgency}} &nbsp;</td>
+        <td>{{p.vreme}} &nbsp;</td>
+        <td>{{p.status}} &nbsp;</td>
+        <td>{{p.ponudaAgencije}} &nbsp;</td>
+        <td>{{p.prihvacen}} &nbsp;</td>
+    </tr>
+</table>

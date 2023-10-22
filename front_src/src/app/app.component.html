@@ -1,0 +1,27 @@
+
+<div class="bg">
+<button class="button-30" *ngIf="ulogovan()" (click)="logOut()">LogOut</button> 
+<button class="button-30" *ngIf="ulogovan()" (click)="show_form()">Change_pass</button>
+
+    <div *ngIf="showform">
+        <table class="centered-text-table">
+            <tr>
+            <td>Unesite sadasnju lozinku: <input type="text" [(ngModel)]="oldpass"></td>
+            </tr>
+            <tr>
+                <td>Unesite novu lozinku: <input type="text" [(ngModel)]="newpass"></td>
+            </tr>
+            <tr>
+                <td>Potvrdi novu lozinku: <input type="text" [(ngModel)]="newpass1"></td>
+            </tr>
+            <tr>
+                <td><button class="button-10" (click)="change()">Confirm</button></td>
+            </tr>
+        </table>
+        <div style="color: red;"> {{msgnewpass}} </div>
+    </div>
+
+    
+        <router-outlet></router-outlet>
+</div>
+

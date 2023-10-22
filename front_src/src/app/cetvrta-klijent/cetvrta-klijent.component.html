@@ -1,0 +1,111 @@
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29" (click)="show_prva()">Profil</button>
+    <button class="button-29" (click)="show_druga()">Objekti</button>
+    <button class="button-29" (click)="show_treca()">Agencije</button>
+    <button class="button-29">Poslovi</button>   
+</div>
+
+<br/>
+<br/>
+
+<table *ngIf="flagsvi" class="center-table">
+    <tr>
+        <th>IdO</th>
+        <th>Status</th>
+        <th>Email osobe</th>
+        <th>Email Agencije</th>
+    </tr>
+
+    <tr *ngFor="let posao of poslovi">
+        <td>{{posao.idO}} &nbsp;</td>
+        <td>{{posao.status}} &nbsp;</td>
+        <td>{{posao.email}} &nbsp;</td>
+        <td>{{posao.emailAgency}}</td>
+    </tr>
+</table>
+
+<table *ngIf="flagzavrseni" class="center-table">
+    <tr>
+        <th>IdO</th>
+        <th>Status</th>
+        <th>Email osobe</th>
+        <th>Email Agencije</th>
+    </tr>
+
+    <tr *ngFor="let posao of zavrseniposlovi">
+        <td>{{posao.idO}} &nbsp;</td>
+        <td>{{posao.status}} &nbsp;</td>
+        <td>{{posao.email}}  &nbsp;</td>
+        <td>{{posao.emailAgency}}</td>
+        <td><button class="button-10" (click)="oceni(posao)">Oceni</button></td>
+    </tr>
+</table>
+
+<table *ngIf="flagaktivni" class="center-table">
+    <tr>
+        <th>IdO</th>
+        <th>Status</th>
+        <th>Email osobe</th>
+        <th>Email Agencije</th>
+    </tr>
+
+    <tr *ngFor="let posao of aktivniposlovi">
+        <td>{{posao.idO}} &nbsp;</td>
+        <td>{{posao.status}} &nbsp;</td>
+        <td>{{posao.email}}  &nbsp;</td>
+        <td>{{posao.emailAgency}}</td>
+        <td><button class="button-10" (click)="pregledaj(posao)">Pregledaj</button></td>
+    </tr>
+</table>
+
+<table *ngIf="flagzahtev" class="center-table">
+    <tr>
+        <div>
+            <th>IdO</th>
+            <th>Status</th>
+            <th>Email osobe</th>
+            <th>Email Agencije</th>
+        </div>
+    </tr>
+
+    <tr *ngFor="let posao of zahtevposlovi">
+        <div style="color: red;" *ngIf="posao.prihvacen==-1">
+            <td>{{posao.idO}}  &nbsp;</td>
+            <td>{{posao.status}}  &nbsp;</td>
+            <td>{{posao.email}}  &nbsp;</td>
+            <td>{{posao.emailAgency}}</td>
+            <td> Odbijen</td>
+        </div>
+        <div style="color: green;" *ngIf="posao.prihvacen==1">
+            <td>{{posao.idO}}  &nbsp;</td>
+            <td>{{posao.status}}  &nbsp;</td>
+            <td>{{posao.email}}  &nbsp;</td>
+            <td>{{posao.emailAgency}}  &nbsp;</td>
+            <td>{{posao.ponudaAgencije}}</td>
+            <td><button class="button-10" (click)="prihvati(posao)">Prihvati</button></td>
+            <td><button class="button-10" (click)="odbij(posao)">Odbij</button></td>
+        </div>
+        <div *ngIf="posao.prihvacen==0">
+            <td>{{posao.idO}} &nbsp;</td>
+            <td>{{posao.status}} &nbsp;</td>
+            <td>{{posao.email}} &nbsp;</td>
+            <td>{{posao.emailAgency}}</td>
+        </div>
+    </tr>
+</table>
+<br/>
+<div class="center-div">
+    <button class="button-10" (click)="show_zavrseni()">Zavrseni poslovi</button>
+    <button class="button-10" (click)="show_aktivni()">Aktivni poslovi</button>
+    <button class="button-10" (click)="show_zahtevi()">Zahtevi za saradnjom</button>
+    <button class="button-10" (click)="show_svi()">Svi poslovi</button>
+    
+</div>
+<div class="center-div" *ngIf="prikazicanvas">
+<canvas id="Canvascetvrta" width="300" height="300">
+    <img id="vrataID" [src]="vrata" width="100" height="100">
+</canvas>
+<button (click)="plati()" *ngIf="prikaziplacanje" class="button-10">Plati</button>
+</div>

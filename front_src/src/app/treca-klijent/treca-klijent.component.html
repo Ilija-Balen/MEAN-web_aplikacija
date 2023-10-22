@@ -1,0 +1,49 @@
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29" (click)="show_prva()">Profil</button>
+    <button class="button-29" (click)="show_druga()">Objekti</button>
+    <button class="button-29">Agencije</button>
+    <button class="button-29" (click)="show_cetvrta()">Poslovi</button>   
+</div>
+<br/>
+<br/>
+<table *ngIf="!show_saradnja">
+    <tr *ngIf="agencylist.length>0">
+        <th>Slika:</th>
+        <th>Naziv:</th>
+        <th>Opis:</th>
+    </tr>
+    <tr *ngFor="let agency of agencylist" (click)="change_page(agency.email)">
+        <div><img [src]="agency.url" width="100" height="100"></div>
+        <td>{{agency.agname}}</td>
+        <td>{{agency.description}}</td>
+        <td><button class="button-10" (click)="saradnja(agency.email)">Zatrazi saradnju</button></td>
+    </tr>  
+    
+</table>
+
+<div *ngIf="show_saradnja" class="center-div2">
+    Vremenski period u kom zelite da se radovi izvrsavaju:<input type="string" [(ngModel)]="vreme">
+    Id vaseg objekta koji zelite da preuredite: <input type="number" [(ngModel)]="idO">
+    <button class="button-10" (click)="trazi_saradnju()">Done</button>
+    <br/>
+    <p style="color: red;">{{errormsg}}</p>
+</div>
+
+<div *ngIf="!show_saradnja" class="center-div">
+    <button class="button-10" (click)="show_all()">PRIKAZI SVE AGENCIJE</button>
+    <input style="height: 20px;" type="string" [(ngModel)]="searchParam">
+
+    <button class="button-10" (click)="show_pretraga()">Pretraga</button>
+    <button class="button-10" (click)="searchByAgname()" *ngIf="showpretraga">Pretraga po imenu agencije</button>
+    <button class="button-10" (click)="searchByAddress()" *ngIf="showpretraga">Pretraga po Adresi</button>
+    <button class="button-10" (click)="searchByboth()" *ngIf="showpretraga">Pretraga po imenu agencije i adresi</button>
+    
+    <button class="button-10" (click)="show_sortiraj()">Sortiraj</button>
+    <button class="button-10" (click)="sortAscAgname()" *ngIf="showsortiraj">Sortiraj agName</button>
+    <button class="button-10" (click)="sortDescAgname()" *ngIf="showsortiraj">Opadajuce agName</button>
+    <button class="button-10" (click)="sortAscAddress()" *ngIf="showsortiraj">Rastuce Adresa</button>
+    <button class="button-10" (click)="sortDescAddress()" *ngIf="showsortiraj">Opadajuce Adresa</button>
+</div>
+

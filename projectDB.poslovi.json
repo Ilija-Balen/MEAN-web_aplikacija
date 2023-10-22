@@ -1,0 +1,245 @@
+[{
+  "_id": {
+    "$oid": "648f326ccd4dfb6a0f42a6a1"
+  },
+  "idO": 1,
+  "status": 0,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "08-12",
+  "prihvacen": -1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f32d0cd4dfb6a0f42a6a4"
+  },
+  "idO": 2,
+  "status": 1,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "08-12",
+  "prihvacen": 1,
+  "__v": 0,
+  "ponudaAgencije": 4000
+},
+{
+  "_id": {
+    "$oid": "648f32d9cd4dfb6a0f42a6a6"
+  },
+  "idO": 3,
+  "status": 1,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "08-13",
+  "prihvacen": 1,
+  "__v": 0,
+  "ponudaAgencije": 2000
+},
+{
+  "_id": {
+    "$oid": "648f32dfcd4dfb6a0f42a6a8"
+  },
+  "idO": 4,
+  "status": 0,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija200@yahoo.com",
+  "vreme": "08-15",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f32f8cd4dfb6a0f42a6ad"
+  },
+  "idO": 5,
+  "status": 0,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija200@yahoo.com",
+  "vreme": "12-16",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f376ecd4dfb6a0f42a6ea"
+  },
+  "idO": 1,
+  "status": 0,
+  "email": "korisnik1@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "09-14",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f3774cd4dfb6a0f42a6ec"
+  },
+  "idO": 2,
+  "status": 0,
+  "email": "korisnik1@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "09-14",
+  "prihvacen": -1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f377bcd4dfb6a0f42a6ee"
+  },
+  "idO": 3,
+  "status": 0,
+  "email": "korisnik1@gmail.com",
+  "emailAgency": "agencija2@yahoo.com",
+  "vreme": "09-12",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f3784cd4dfb6a0f42a6f0"
+  },
+  "idO": 4,
+  "status": 0,
+  "email": "korisnik1@gmail.com",
+  "emailAgency": "agencija3@gmail.com",
+  "vreme": "09-15",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f380fcd4dfb6a0f42a716"
+  },
+  "idO": 1,
+  "status": 0,
+  "email": "korisnik2@gmail.com",
+  "emailAgency": "agencija3@gmail.com",
+  "vreme": "08-13",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f3814cd4dfb6a0f42a718"
+  },
+  "idO": 2,
+  "status": 0,
+  "email": "korisnik2@gmail.com",
+  "emailAgency": "agencija2@yahoo.com",
+  "vreme": "08-12",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f3884cd4dfb6a0f42a72e"
+  },
+  "idO": 1,
+  "status": 0,
+  "email": "korisnik3@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "13-17",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "648f388ecd4dfb6a0f42a730"
+  },
+  "idO": 2,
+  "status": 0,
+  "email": "korisnik3@gmail.com",
+  "emailAgency": "agencija2@yahoo.com",
+  "vreme": "13-14",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "649034d192fde84807e5fae0"
+  },
+  "idO": 6,
+  "status": 0,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "08-16",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64904929403de8669f8e97f0"
+  },
+  "idO": 1,
+  "status": 2,
+  "email": "test123@yahoo.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "10-15",
+  "prihvacen": 1,
+  "__v": 0,
+  "ponudaAgencije": 2000
+},
+{
+  "_id": {
+    "$oid": "6490492c403de8669f8e97f2"
+  },
+  "idO": 2,
+  "status": 1,
+  "email": "test123@yahoo.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "10-15",
+  "prihvacen": 1,
+  "__v": 0,
+  "ponudaAgencije": 3000
+},
+{
+  "_id": {
+    "$oid": "6490492f403de8669f8e97f4"
+  },
+  "idO": 3,
+  "status": 0,
+  "email": "test123@yahoo.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "10-15",
+  "prihvacen": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6490493c403de8669f8e97f9"
+  },
+  "idO": 4,
+  "status": 0,
+  "email": "test123@yahoo.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "10-16",
+  "prihvacen": -1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6490574d403de8669f8e98b5"
+  },
+  "idO": 5,
+  "status": 2,
+  "email": "test123@yahoo.com",
+  "emailAgency": "agencija2@yahoo.com",
+  "vreme": "12-13",
+  "prihvacen": 1,
+  "__v": 0,
+  "ponudaAgencije": 5000
+},
+{
+  "_id": {
+    "$oid": "6490cb069171059991a7248e"
+  },
+  "idO": 7,
+  "status": 0,
+  "email": "drazen@gmail.com",
+  "emailAgency": "agencija1@gmail.com",
+  "vreme": "08-13",
+  "prihvacen": 0,
+  "__v": 0
+}]

@@ -1,0 +1,61 @@
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29">Profil</button>
+    <button class="button-29" (click)="show_druga()">Objekti</button>
+    <button class="button-29" (click)="show_treca()">Agencije</button>
+    <button class="button-29" (click)="show_cetvrta()">Poslovi</button>   
+</div>
+<br/>
+<br/>
+<div style="text-align: center;">
+<img [src]="loggeduser.url" width="100" height="100">
+</div>
+<table class="center-table">
+    <tr><td>Ime: </td> <td>{{loggeduser.firstname}}</td></tr>
+    <tr><td>Prezime: </td> <td>{{loggeduser.lastname}}</td></tr>
+    <tr><td>E-mail: </td> <td>{{loggeduser.email}}</td></tr>
+    <tr><td>Telefon: </td> <td>{{loggeduser.phone}}</td></tr>
+</table>
+<br/>
+<br/>
+<div style="text-align: center;">
+    <button class="button-10" (click)="show_azuriraj()">Azuriraj</button>
+</div>
+<br/>
+<br/>
+<table *ngIf="showazuriraj" class="center-table">
+    <tr>
+        <td>Username : </td><td><input type="text" name="username" [(ngModel)]="username"></td>
+    </tr>
+
+    <tr>
+        <td>Telephone :</td><td><input type="text" name="telephone" [(ngModel)]="telephone"></td>
+    </tr>
+    
+    <tr>
+        <td>E-mail : </td><td><input type="email" name="email" [(ngModel)]="email"></td>
+    </tr>
+    
+    
+        
+    <tr>
+        <td>
+            Firstname :</td><td> <input type="text" name="firstname" [(ngModel)]="firstname">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Lastname :</td><td> <input type="text" name="lastname" [(ngModel)]="lastname">
+        </td>
+    </tr>
+            
+        
+</table>
+<br/>
+<br/>
+<div *ngIf="showazuriraj" style="text-align: center;">
+    <button class="button-10" (click)="azurirajUser()">Azuriraj User</button>
+</div>
+
+<p style="color: red;">{{message}}</p>

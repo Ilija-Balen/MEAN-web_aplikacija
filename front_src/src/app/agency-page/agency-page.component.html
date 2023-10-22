@@ -1,0 +1,39 @@
+<br/>
+<br/>
+<div *ngIf="personalized" class="center-div">
+    <button class="button-29" (click)="show_prva()">Profil</button>
+    <button class="button-29" (click)="show_druga()">Objekti</button>
+    <button class="button-29" (click)="show_treca()">Agencije</button>
+    <button class="button-29" (click)="show_cetvrta()">Poslovi</button>   
+</div>
+
+<br/>
+
+<table>
+    <div *ngIf="!personalized">
+        <tr *ngIf="agencypage!=null">
+            <th>Komentari</th>
+            <th>Ocene</th>
+        </tr>
+    
+        <tr *ngFor="let n of agencypage.komentari">
+            <td>{{n.komentar}}</td>
+            <td>{{n.ocena}}</td>
+        </tr>
+    </div>
+
+    <div *ngIf="personalized">
+        <tr *ngIf="agencypage!=null">
+            <th>First and lastname</th>
+            <th>Komentari</th>
+            <th>Ocene</th>
+        </tr>
+    
+        <tr *ngFor="let n of agencypage.komentari">
+            <td>{{n.firstname}} {{n.lastname}}</td>
+            <td>{{n.komentar}}</td>
+            <td>{{n.ocena}}</td>
+        </tr>  
+        
+    </div>
+</table>

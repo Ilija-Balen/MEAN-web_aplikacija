@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "648f339dc741ea753f44254b"
+  },
+  "email": "agencija1@gmail.com",
+  "komentari": [
+    {
+      "komentar": "Comment1",
+      "ocena": 3,
+      "firstname": "korisnik1",
+      "lastname": "korisnik1",
+      "email": "korisnik1@gmail.com"
+    },
+    {
+      "komentar": "Novi komentar 2",
+      "ocena": 4,
+      "firstname": "drazen",
+      "lastname": "drazen",
+      "email": "drazen@gmail.com"
+    },
+    {
+      "komentar": "Comment1",
+      "ocena": 3,
+      "firstname": "korisnik2",
+      "lastname": "korisnik2",
+      "email": "korisnik2@gmail.com"
+    },
+    {
+      "komentar": "Izmenjen komentar od strane test osobe",
+      "ocena": 5,
+      "firstname": "Stefan",
+      "lastname": "testUser",
+      "email": "test@gmail.com",
+      "_id": {
+        "$oid": "64905244403de8669f8e987e"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "648f339dc741ea753f44254c"
+  },
+  "email": "agencija2@gmail.com",
+  "komentari": [
+    {
+      "komentar": "Comment15",
+      "ocena": 5,
+      "firstname": "korisnik1",
+      "lastname": "korisnik1",
+      "email": "korisnik1@gmail.com"
+    },
+    {
+      "komentar": "neki komentar ",
+      "ocena": 4,
+      "firstname": "drazen",
+      "lastname": "drazen",
+      "email": "drazen@gmail.com"
+    },
+    {
+      "komentar": "Comment1",
+      "ocena": 3,
+      "firstname": "korisnik2",
+      "lastname": "korisnik2",
+      "email": "korisnik2@gmail.com"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "648f339dc741ea753f44254d"
+  },
+  "email": "agencija3@gmail.com",
+  "komentari": [
+    {
+      "komentar": "Comment15",
+      "ocena": 5,
+      "firstname": "korisnik3",
+      "lastname": "korisnik3",
+      "email": "korisnik3@gmail.com"
+    },
+    {
+      "komentar": "neki komentar ",
+      "ocena": 4,
+      "firstname": "korisnik2",
+      "lastname": "drazen",
+      "email": "korisnik2@gmail.com"
+    }
+  ]
+}]

@@ -1,0 +1,55 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<table class="table-form">
+    
+    <tr>Username:</tr>
+    <tr><input type="text" name="username" [(ngModel)]="username"></tr>
+    <tr>Password:</tr>
+    <tr><input type="password" name="password" [(ngModel)]="password"></tr>
+    <br/>
+    <button (click)="login()" class="button-29">Login</button>
+    <a routerLink="/register">Register new client</a>
+</table>
+
+
+
+<br/>
+<br/>
+<button style="margin-left: 44%;" class="button-29-1" (click)="change_password()">Zaboravljena Lozinka</button>
+<br/>
+<br/>
+<table class="table-form2">
+    <tr *ngIf="promena">
+        <td>Unesite vas email:<input type="text" [(ngModel)]="email"></td>
+        <td>Potvrda email-a <input type="text" [(ngModel)]="email2"></td>
+        <td> <button (click)="promeni()" class="button-29-1">Potvrdi</button> </td> 
+    </tr>
+
+    <tr></tr>
+    <tr></tr>
+    <tr *ngIf="promena2">
+        <td>Unesite temppassword: <input type="string" [(ngModel)]="tmp"></td>
+    </tr>
+    
+    <tr *ngIf="promena2">
+        <td>Unesite nov password: <input type="string" [(ngModel)]="newpass"></td>
+    </tr>
+    <tr *ngIf="promena2">
+        <td> <button (click)="promeni_sifru()" class="button-29-1">Promeni sifru</button></td>
+    </tr>
+</table>
+{{temppass}}
+
+<div style="color: red;">{{message}}</div>

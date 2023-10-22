@@ -1,0 +1,67 @@
+<br/>
+<br/>
+<div class="center-div">
+    <button class="button-29"  (click)="show_prva()">Profil</button>
+    <button class="button-29" >Objekti</button>
+    <button class="button-29" (click)="show_treca()">Agencije</button>
+    <button class="button-29" (click)="show_cetvrta()">Poslovi</button>   
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<table style="margin-left: 10%;">
+    <tr *ngFor="let obj of objekti"> 
+        <td>Tip: {{obj.tip}} &nbsp;</td>
+        <td>Adresa: {{obj.State}} {{obj.City}} {{obj.Street}} {{obj.snumber}} &nbsp;</td> 
+        <td>Broj prostorija: {{obj.roomcnt}} &nbsp;</td> 
+        <td>Kvadratura: {{obj.surface}} &nbsp;</td>
+        <td *ngIf="obj.url"><img [src]="obj.url" *ngIf="obj.url" width="150" height="150"></td>
+        <td><button class="button-10" (click)="show_izmeniobj(obj)">Izmeni</button></td>
+        <td><button class="button-10" (click)="deleteobj(obj)">Obrisi</button></td>
+        <td><button class="button-10" (click)="prikazi_canvas(obj)">Canvas</button></td>
+    </tr>
+</table>
+<br/>
+<div *ngIf="prikazicanvas" style="text-align: center;">
+<canvas id="Canvasdruga" width="300" height="300">
+    <img id="vrataID" [src]="vrata">
+</canvas>
+</div>
+<button class="button-10" (click)="show_addobject()">Novi objekat</button>
+<table *ngIf="showaddobjects" class="align-elem-table">
+    <tr><td>Tip:</td> <td> <input type="text" [(ngModel)]="tipdodavanja"></td> </tr>
+    <tr> <td>Adresa: </td><input type="text" [(ngModel)]="adresadodavanja"><td></td></tr>
+    <tr><td>Broj prostorija:</td><td><input type="number" [(ngModel)]="cntdodavanja"></td>  </tr>
+    <tr><td>Povrsina u m2:</td> <td><input type="number" [(ngModel)]="surfacedodavanja"></td></tr>
+    <tr *ngIf="cntdodavanja==1"> <td> <img [src]="jednosobni" width="150" height="150" (click)="setStan(jednosobni)"> </td></tr>
+    <tr *ngIf="cntdodavanja==2"> <td> <img [src]="dvosobni" width="150" height="150" (click)="setStan(dvosobni)"> </td></tr>
+    <tr *ngIf="cntdodavanja==3"> <td> <img [src]="trosobni" width="150" height="150" (click)="setStan(trosobni)"> </td></tr>
+</table>
+<button class="button-10" (click)="addobject()">Dodaj objekat</button>
+<br/>
+<br/>
+
+Dodaj objekat putem JSON fajla:
+<input type="file" (change)="selectFile($event)"> 
+<button class="button-10" (click)="addobjectJSON()">Dodaj putem JSON</button>
+
+
+<div style="color: red; font-size: 20px;">{{msgobj}}</div>
+
+<br/>
+<br/>
+<div *ngIf="showizmeniobj" class="align-elem-table">
+    <table>
+        <tr> Izmeni tip: <input type="text" [(ngModel)]="tipzamenjanje"></tr>
+        <tr> Izmeni adresu: <input type="text" [(ngModel)]="adresazamenjanje"></tr>
+        <tr> Izmeni broj soba: <input type="text" [(ngModel)]="cntmenjanje"></tr>
+        <tr> Izmeni surface: <input type="text" [(ngModel)]="surfacemenjanje"></tr>
+        Izmeni skicu:
+            <tr *ngIf="(objekatzamenjanje.roomcnt==1 && cntmenjanje==null) || cntmenjanje==1"> <td> <img [src]="jednosobni" width="150" height="150" (click)="setStanmenjanje(jednosobni)"> </td></tr>
+            <tr *ngIf="(objekatzamenjanje.roomcnt==2 && cntmenjanje==null) || cntmenjanje==2"> <td> <img [src]="dvosobni" width="150" height="150" (click)="setStanmenjanje(dvosobni)"> </td></tr>
+            <tr *ngIf="(objekatzamenjanje.roomcnt==3 && cntmenjanje==null) || cntmenjanje==3"> <td> <img [src]="trosobni" width="150" height="150" (click)="setStanmenjanje(trosobni)"> </td></tr>
+        <button class="button-10" (click)="izmeni()">Izvrsi izmenu</button>
+    </table>
+</div>

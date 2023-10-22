@@ -1,0 +1,43 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<div *ngIf="flagIma" class="center-div">
+Vec ste ostavili komentar.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+Izmenite komentar: <textarea [(ngModel)]="tekstkomentara"></textarea>
+    
+Izmenite ocenu: <input type="number" [(ngModel)]="ocena">
+<button class="button-10" (click)="izmeni()">Izmeni</button>
+<br/>
+<br/>
+Obrisite komentar: <button class="button-10" (click)="obrisi()">Obrisi</button>
+</div>
+</div>
+
+<div *ngIf="flagNema" class="center-div">
+    Niste ostavili komentar.
+    <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div>
+    Unesite nov komentar: <textarea [(ngModel)]="tekstkomentara"></textarea>
+    
+    Unesite ocenu: <input type="number" [(ngModel)]="ocena">
+    <br/>
+<br/>
+    <button class="button-10" (click)="dodajkomentar()">Dodaj komentar</button>
+</div>
+
+{{message}}

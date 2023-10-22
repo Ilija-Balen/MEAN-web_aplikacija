@@ -1,0 +1,38 @@
+<button class="button-28" (click)="login()">Log in</button>
+<table class="center">
+    <tr *ngIf="agencylist.length>0">
+        <th>Slika:</th>
+        <th>Naziv:</th>
+        <th>Opis:</th>
+    </tr>
+    <tr *ngFor="let agency of agencylist" (click)="change_page(agency.email)">
+        <div><img [src]="agency.url" width="100" height="100"></div>
+        <td>{{agency.agname}}</td>
+        <td>{{agency.description}}</td>
+    </tr>  
+    
+</table>
+<br/>
+<div class="center-div">
+    <input type="string" [(ngModel)]="searchParam">
+    <br/>
+    <br/>
+    <button class="button-23" (click)="show_pretraga()" *ngIf="!showpretraga">Pretrazi-Po</button>
+    <button class="button-23" (click)="searchByAgname()" *ngIf="showpretraga">Pretraga agName</button>
+    <button class="button-23" (click)="searchByAddress()" *ngIf="showpretraga">Pretraga Adresa</button>
+    <button class="button-23" (click)="searchByboth()" *ngIf="showpretraga">Pretraga agName&&Adresa</button>
+    <br/>
+    <br/>
+    
+    <button class="button-23" (click)="show_sortiraj()" *ngIf="!showsortiraj">Sortiraj</button>
+    <button class="button-23" (click)="sortAscAgname()" *ngIf="showsortiraj">Rastuce agName</button>
+    <button class="button-23" (click)="sortDescAgname()" *ngIf="showsortiraj">Opadajuce agName</button>
+    <button class="button-23" (click)="sortAscAddress()" *ngIf="showsortiraj">Rastuce adresa</button>
+    <button class="button-23" (click)="sortDescAddress()" *ngIf="showsortiraj">Opadajuce adresa</button>
+    
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>

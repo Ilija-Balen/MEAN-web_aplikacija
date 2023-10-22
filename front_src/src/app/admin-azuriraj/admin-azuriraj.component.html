@@ -1,0 +1,64 @@
+<p>admin-azuriraj works!</p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<table>
+    <tr>
+        <td>Username : </td><td> <input type="text" name="username" [(ngModel)]="username"></td>
+    </tr>
+    <tr>
+        <td>Password : </td><td> <input type="text" name="password" [(ngModel)]="password"></td>
+    </tr>
+    <tr>
+        <td>Confirm password :</td><td>  <input type="password" name="password2" [(ngModel)]="password2"></td>
+    </tr>
+    
+    <tr>
+        <td>Telephone :</td><td>  <input type="text" name="telephone" [(ngModel)]="telephone"></td>
+    </tr>
+    
+    <tr>
+        <td>E-mail :</td><td> <input type="email" name="email" [(ngModel)]="email"></td>
+    </tr>
+    <tr>
+    <td>Picture:</td><td> <input type="file" (change)="selectFile($event)"></td>      
+    </tr>
+            <tr *ngIf="loggedUser.type==0">
+                <td>
+                    Firstname :</td><td> <input type="text" name="firstname" [(ngModel)]="firstname">
+                </td>
+            </tr>
+            <tr *ngIf="loggedUser.type==0">
+                <td>
+                    Lastname :</td><td> <input type="text" name="lastname" [(ngModel)]="lastname">
+                </td>
+            </tr>
+            <button class="button-10" (click)="azurirajUser()" *ngIf="loggedUser.type==0">Azuriraj User</button>
+        
+        
+
+        <tr *ngIf="loggedUser.type==1">
+            <td>Agency name :</td><td> <input type="text" name="agname" [(ngModel)]="agname"></td>
+        </tr>
+        <tr *ngIf="loggedUser.type==1"> <td>Address(STATE,CITY,STREET) : </td></tr>
+        <tr *ngIf="loggedUser.type==1"><td>STATE : </td><td> <input type="text" name="state" value="state" [(ngModel)]="state"></td></tr>
+        <tr *ngIf="loggedUser.type==1"><td>CITY : </td><td> <input type="text" name="city" value="city" [(ngModel)]="city"></td></tr>
+        <tr *ngIf="loggedUser.type==1"><td>STREET : </td><td> <input type="text" name="street" value="street" [(ngModel)]="street"></td></tr>
+        <tr *ngIf="loggedUser.type==1"><td> Street Number :</td><td><input type="number" name="snumber" [(ngModel)]="snumber"></td></tr>
+
+        <tr *ngIf="loggedUser.type==1">
+            <td>PIB :</td><td> <input type="text" name="mbroj" [(ngModel)]="PIB"></td>
+        </tr>
+        <tr *ngIf="loggedUser.type==1">
+            <td>Description :</td><td> <input type="text" name="description" [(ngModel)]="desc"></td>
+        </tr>
+        <button class="button-10" (click)="azurirajAgency()" *ngIf="loggedUser.type==1" >Azuriraj Agency</button>
+    
+
+</table>
+
+<p style="color: red;"> {{message}}</p>

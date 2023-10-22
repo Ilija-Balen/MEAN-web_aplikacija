@@ -1,0 +1,99 @@
+
+<br/>
+<br/>
+<div style="text-align: right;">
+    <button (click)="nazad()" class="button-29">Nazad</button>
+</div>
+<br/>
+<br/>
+<button class="button-29" (click)="show_addradnici()">Dodavanje Radnika</button>
+<br/>
+<table *ngIf="radnici.length>0">
+    <p style="font-size: 21px;">RADNICI :</p>
+    <br/>
+    <tr>
+        <th>Email</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone</th>
+        <th>Speciality</th>
+        <th>EmailAgency</th>
+    </tr>
+    <tr *ngFor="let r of radnici">
+        <td>{{r.email}} &nbsp;</td>
+        <td>{{r.firstname}}&nbsp;</td>
+        <td>{{r.lastname}} &nbsp;</td>
+        <td>{{r.phone}} &nbsp;</td>
+        <td>{{r.speciality}} &nbsp;</td>
+        <td>{{r.emailAgency}} &nbsp;</td>
+        <td><button class="button-10" (click)="show_izmeni(r.email)">Izmeni</button></td>
+        <td><button class="button-10" (click)="obrisi(r.email)">Obrisi</button></td>
+    </tr>
+</table>
+<br/>
+<br/>
+<br/>
+<div *ngIf="showaddradnici" style="text-align: center;"><p style="font-size: 21px;">Forma za dodavanje radnika nekoj agenciji:</p></div>
+<table *ngIf="showaddradnici" class="table-align-left">
+    
+    <tr>
+        <td>Email agencije :</td>
+        <td><input type="text" [(ngModel)]="emailAgencyFF"></td>
+    </tr>
+    <tr>
+        <td>Email radnika :</td>
+        <td><input type="text" [(ngModel)]="emailFF"></td>
+    </tr>
+    <tr>
+        <td>Ime radnika :</td>
+        <td> <input type="text"  [(ngModel)]="firstnameFF"></td>
+    </tr>
+    <tr>
+        <td>Prezime radnika :</td>
+        <td><input type="text" [(ngModel)]="lastnameFF"></td>
+    </tr>
+    <tr>
+        <td>Telefon radnika :</td>
+        <td><input type="text" [(ngModel)]="phoneFF"></td>
+    </tr>
+    <tr>
+        <td> Specijalnost radnika :</td>
+        <td><input type="text" [(ngModel)]="specialityFF"></td>
+    </tr>
+    <button class="button-10" (click)="dodajRadnika()">Dodaj radnika</button>
+</table>
+
+<div *ngIf="showizmeni" style="text-align: center;">
+    <p style="font-size: 21px;"> Promeni Radnika sa emailom {{emailSession}}</p>
+    </div>
+<table *ngIf="showizmeni" class="table-align-left">
+    <tr>
+        <td>Email agencije :</td>
+        <td><input type="text" [(ngModel)]="emailAgencyFF"></td>
+    </tr>
+    <tr>
+        <td>Email radnika :</td>
+        <td><input type="text" [(ngModel)]="emailFF"></td>
+    </tr>
+    <tr>
+        <td> Ime radnika :</td>
+        <td><input type="text"  [(ngModel)]="firstnameFF"></td>
+    </tr>
+    <tr>
+        <td>Prezime radnika :</td>
+        <td><input type="text" [(ngModel)]="lastnameFF"></td>
+    </tr>
+    <tr>
+        <td>Telefon radnika :</td>
+        <td><input type="text" [(ngModel)]="phoneFF"></td>
+    </tr>
+    <tr>
+        <td> Specijalnost radnika :</td>
+        <td><input type="text" [(ngModel)]="specialityFF"></td>
+    </tr>
+    <button class="button-10" (click)="azurirajRadnika()">Azuriraj radnika</button>
+</table>
+
+
+
+<p style="color: red;">{{msg}}</p>
